@@ -1,6 +1,6 @@
 cask "mlxstudio" do
-  version "1.3.21"
-  sha256 "2bf7cc81a8ad9454036e9a37e47040b664c9b08e2638eb451d0e0d82f8b144a9"
+  version "1.3.22"
+  sha256 "9a5862f8d39efe21f51cc63ac0dbec22b80cf41fa28d57afe5f49c9257492e62"
 
   url "https://github.com/jjang-ai/mlxstudio/releases/download/v#{version}/vMLX-#{version}-arm64.dmg"
   name "vMLX"
