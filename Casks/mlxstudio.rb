@@ -8,7 +8,7 @@ cask "mlxstudio" do
   desc "Local AI inference for Apple Silicon — Text, Image, Video & Audio generation on Mac"
   homepage "https://github.com/jjang-ai/vmlx"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
   depends_on arch: :arm64
 
   app "vMLX.app"
