@@ -23,5 +23,5 @@ brew uninstall --cask mlxstudio
 
 ## Requirements
 
-- macOS 14.0 (Sonoma) or later
+- macOS 14.5 (Sonoma) or later
 - Apple Silicon (M1/M2/M3/M4)

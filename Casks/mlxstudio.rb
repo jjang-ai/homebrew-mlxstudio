@@ -1,11 +1,13 @@
-cask "mlxstudio" do
-  version "1.3.24"
-  sha256 "06ff9bab4ba65bb4db073ba370d29b394d102863113ebdfb5447a00b90932eda"
+# frozen_string_literal: true
 
-  url "https://github.com/jjang-ai/mlxstudio/releases/download/v#{version}/vMLX-#{version}-arm64.dmg"
+cask "mlxstudio" do
+  version "1.6.11"
+  sha256 "c1a8dcd17563a772b83e64bfb443aabedb46111a1e0e500ab69c4fc49143cb2b"
+
+  url "https://github.com/jjang-ai/mlxstudio/releases/download/v#{version}/vMLX-#{version}-sequoia-arm64.dmg"
   name "vMLX"
   name "MLX Studio"
-  desc "Local AI inference for Apple Silicon — Text, Image, Video & Audio generation on Mac"
+  desc "Local text, image, video, and audio inference"
   homepage "https://github.com/jjang-ai/vmlx"
 
   depends_on macos: ">= :sonoma"
@@ -14,8 +16,8 @@ cask "mlxstudio" do
   app "vMLX.app"
 
   zap trash: [
-    "~/Library/Application Support/vmlx",
-    "~/.mlxstudio",
     "~/.cache/vmlx-engine",
+    "~/.mlxstudio",
+    "~/Library/Application Support/vmlx",
   ]
 end
