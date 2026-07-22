@@ -10,7 +10,12 @@ cask "mlxstudio" do
   desc "Local text, image, video, and audio inference"
   homepage "https://github.com/jjang-ai/vmlx"
 
-  depends_on macos: ">= :sonoma"
+  livecheck do
+    url "https://github.com/jjang-ai/mlxstudio/releases/latest"
+    strategy :github_latest
+  end
+
+  depends_on macos: :sonoma
   depends_on arch: :arm64
 
   app "vMLX.app"
