@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "mlxstudio" do
-  version "1.6.42"
-  sha256 "d41c4409ec133953149302d357bb1247541858422371aaf419b30afb7bfa3bfc"
+  version "1.6.43"
+  sha256 "a49ca0abfbabd8643f0f69d9b550093d8b53d0e9c5e7b51ca7dea94fc67b4772"
 
   url "https://github.com/jjang-ai/mlxstudio/releases/download/v#{version}/vMLX-#{version}-sequoia-arm64.dmg"
   name "vMLX"
