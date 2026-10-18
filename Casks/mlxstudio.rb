@@ -1,10 +1,19 @@
 # frozen_string_literal: true
 
 cask "mlxstudio" do
-  version "1.6.79"
-  sha256 "f4323580efa4ccc403c12f6a2384a992592c7369c88f2aeed4d966ffb09b17f6"
+  version "1.6.80"
 
-  url "https://github.com/jjang-ai/mlxstudio/releases/download/v#{version}/vMLX-#{version}-sequoia-arm64.dmg"
+  on_sequoia :or_older do
+    sha256 "1f97895dc875b18655e33865233fe21a418eaad91bd5defdddaa4f8fcd0c56ea"
+
+    url "https://github.com/jjang-ai/mlxstudio/releases/download/v#{version}/vMLX-#{version}-sequoia-arm64.dmg"
+  end
+  on_tahoe :or_newer do
+    sha256 "586dec74d543e5fe270cee3a07aa6ee575a7c9b0e03ce968f44ae2a50d50f878"
+
+    url "https://github.com/jjang-ai/mlxstudio/releases/download/v#{version}/vMLX-#{version}-tahoe-arm64.dmg"
+  end
+
   name "vMLX"
   name "MLX Studio"
   desc "Local text, image, video, and audio inference"
